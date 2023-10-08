@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menufx.NewDish">
+   <children>
+      <Label text="NEW DISH" textFill="#230ded">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <padding>
+            <Insets left="200.0" />
+         </padding>
+      </Label>
+      <HBox prefHeight="41.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="23.0" prefWidth="106.0" text="Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txNameDish" prefHeight="26.0" prefWidth="133.0" />
+            <Label prefHeight="23.0" prefWidth="111.0" text="Description">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txDescriptionDish" prefHeight="26.0" prefWidth="228.0" />
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="75.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="233.0" layoutY="2.0" text="List of ingredients" textFill="#e813aa">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tbIngredients" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="183.0" text="Name" />
+          <TableColumn fx:id="colDescription" prefWidth="316.0" text="Descripton" />
+            <TableColumn fx:id="colQuantity" prefWidth="100.0" text="Quantity" />
+        </columns>
+      </TableView>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="101.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="56.0" text="Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="25.0" prefWidth="77.0" text="Description">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="26.0" prefWidth="91.0" text="Frequency">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <CheckBox fx:id="checkMilk" mnemonicParsing="false" text="Milk">
+                     <padding>
+                        <Insets left="40.0" top="5.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="201.0">
+               <children>
+                  <TextField fx:id="txName" />
+                  <TextField fx:id="txDescription" prefHeight="26.0" prefWidth="212.0" />
+                  <TextField fx:id="txFrequency" />
+                  <CheckBox fx:id="checkNuts" mnemonicParsing="false" text="Nuts">
+                     <padding>
+                        <Insets left="60.0" top="5.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="118.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="72.0" text="Calories">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="28.0" prefWidth="109.0" text="Carbohydrates">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Fat">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <CheckBox fx:id="checkEgg" mnemonicParsing="false" text="Egg">
+                     <padding>
+                        <Insets top="7.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="75.0">
+               <children>
+                  <TextField fx:id="txCalories" />
+                  <TextField fx:id="txCarbohydrates" prefHeight="26.0" prefWidth="76.0" />
+                  <TextField fx:id="txFat" prefHeight="26.0" prefWidth="198.0" />
+                  <CheckBox fx:id="checkGluten" mnemonicParsing="false" text="Gluten">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </CheckBox>
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="100.0" prefWidth="153.0">
+               <children>
+                  <Label layoutX="8.0" layoutY="18.0" text="Quantity">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txQuantity" layoutX="60.0" layoutY="14.0" prefHeight="26.0" prefWidth="65.0" />
+                  <Button layoutX="23.0" layoutY="60.0" mnemonicParsing="false" onAction="#addIngredient" text="Add Ingredient" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="57.0" prefWidth="600.0">
+         <children>
+            <Button layoutX="259.0" layoutY="8.0" mnemonicParsing="false" onAction="#save" text="Save" textFill="#052ced">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

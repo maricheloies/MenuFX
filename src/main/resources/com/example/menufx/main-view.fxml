@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menufx.MainController">
+   <children>
+      <Pane prefHeight="59.0" prefWidth="585.0">
+         <children>
+            <Label layoutX="294.0" layoutY="2.0" prefHeight="87.0" prefWidth="435.0" text="MENU DESIGNER" textFill="#0f0ce2">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="53.0" prefWidth="628.0">
+         <children>
+            <Label layoutX="303.0" layoutY="10.0" text="Date">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <DatePicker fx:id="txtDate" layoutX="352.0" layoutY="14.0" />
+         </children>
+      </Pane>
+      <HBox prefHeight="39.0" prefWidth="628.0">
+         <children>
+            <Label text="Search Text">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtSearch"  onKeyReleased="#searchElements">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <CheckBox fx:id="radMilk" mnemonicParsing="false" onAction="#milkElements" text="Milk">
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="radNuts" mnemonicParsing="false" onAction="#nutsElements" text="Nuts">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="radEggs" mnemonicParsing="false" onAction="#eggsElements" text="Egg">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="radGluten" mnemonicParsing="false" onAction="#glutenElements" text="Gluten">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="358.0" prefWidth="800.0">
+         <children>
+            <TableView fx:id="tbElements" prefHeight="357.0" prefWidth="430.0">
+              <columns>
+                <TableColumn fx:id="tbColumnName" prefWidth="228.0" text="Name" />
+                <TableColumn fx:id="tbColumnCalories" minWidth="0.0" prefWidth="52.0" text="Calories" />
+                  <TableColumn fx:id="tbColumnCarbohydrates" prefWidth="50.0" text="Carbo" />
+                  <TableColumn fx:id="tbColumnFat" prefWidth="74.0" text="Fat" />
+              </columns>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TableView>
+            <Pane prefHeight="251.0" prefWidth="87.0">
+               <children>
+                  <Button fx:id="btAdd" layoutX="19.0" layoutY="91.0" mnemonicParsing="false" onAction="#AddElementToMenu" prefHeight="35.0" prefWidth="49.0" text="&gt;&gt;">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Button fx:id="btRemove" layoutX="19.0" layoutY="140.0" mnemonicParsing="false" onAction="#removeElementFromMenu" prefHeight="35.0" prefWidth="49.0" text="X" textFill="#f71616">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+               </children></Pane>
+            <TableView fx:id="tbMenu" prefHeight="357.0" prefWidth="351.0">
+              <columns>
+                <TableColumn fx:id="tbMenuName" prefWidth="77.0" text="Name" />
+                <TableColumn fx:id="tbMenuDesc" prefWidth="165.0" text="Description" />
+              </columns>
+            </TableView>
+         </children></HBox>
+      <Pane prefHeight="38.0" prefWidth="848.0" />
+      <HBox prefHeight="231.0" prefWidth="800.0">
+         <children>
+            <Pane prefHeight="168.0" prefWidth="214.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff03" height="225.0" layoutX="9.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="229.0" />
+                  <Button fx:id="btNewAliment" layoutX="41.0" layoutY="30.0" mnemonicParsing="false" onAction="#newAliment" text="New Aliment">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btNewDish" layoutX="57.0" layoutY="98.0" mnemonicParsing="false" onAction="#newDish" text="New Dish">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+               </children>
+            </Pane>
+            <Pane prefHeight="221.0" prefWidth="221.0">
+               <children>
+                  <Button fx:id="btSave" layoutX="81.0" layoutY="63.0" mnemonicParsing="false" onAction="#save" prefHeight="45.0" prefWidth="180.0" text="Save Menu" textFill="#1906e2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane prefHeight="227.0" prefWidth="367.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="225.0" layoutX="8.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="333.0" />
+                  <Label layoutX="20.0" layoutY="2.0" prefHeight="38.0" prefWidth="333.0" text="Nutritional values" textFill="#b25a07">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="57.0" prefHeight="23.0" prefWidth="112.0" text="Calories">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="26.0" layoutY="86.0" prefHeight="23.0" prefWidth="160.0" text="Carbohydrates">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label layoutX="30.0" layoutY="114.0" prefHeight="23.0" prefWidth="76.0" text="Fat">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label fx:id="lbCalories" layoutX="257.0" layoutY="57.0" text="0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label fx:id="lbCarbohydrates" layoutX="257.0" layoutY="86.0" text="0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label fx:id="lbFat" layoutX="257.0" layoutY="114.0" text="0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Button fx:id="btLimits" layoutX="117.0" layoutY="159.0" mnemonicParsing="false" onAction="#statLimits" text="Set Limits">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+               </children>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </Pane>
+         </children></HBox>
+   </children>
+</VBox>

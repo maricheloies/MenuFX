@@ -1,0 +1,8 @@
+Steak;Pork steak;Weekly;false;false;false;false;120.0;0.0;200.0
+Bread;Wheat bread;Daily;true;false;false;false;20.0;100.0;0.0
+Egg;Eggs;Weekly;false;false;false;true;30.0;0.0;30.0
+New;NN;Weekly;false;false;false;true;10.0;30.0;20.0
+m;b;d;false;true;false;false;10.0;2.0;30.0
+s;s;s;true;false;false;false;4.0;4.0;4.0
+dsdsdds;sdsd;sdsd;false;false;false;false;4334.0;43.0;434.0
+Pork;pork ;weekly;false;false;false;false;180.0;0.0;10.0
